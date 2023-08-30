@@ -4,6 +4,8 @@ import Image from "next/image";
 import { Container } from "@/components/container";
 import { GameProps } from "@/utils/types/game";
 
+import { Input } from "@/components/input";
+
 import { BsArrowRightSquare } from "react-icons/bs";
 
 async function getDailyGame() {
@@ -49,6 +51,8 @@ export default async function Home() {
             </div>
           </section>
         </Link>
+
+        <Input />
       </Container>
     </main>
   );
