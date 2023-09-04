@@ -6,7 +6,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "DailyGames",
+  title: "DailyGames - Descubra novos jogos",
   description: "Mais de 10 mil jogos separados e organizados.",
   keywords: ["games", "jogos"],
   openGraph: {
