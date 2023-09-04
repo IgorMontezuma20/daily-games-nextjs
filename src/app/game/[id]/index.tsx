@@ -6,6 +6,7 @@ import { GameProps } from "@/utils/types/game";
 import { Container } from "@/components/container";
 import { Label } from "./components/label";
 import { GameCard } from "@/components/GameCard";
+import { FavoriteCard } from "@/app/profile/components/favorite";
 
 interface ParamsProps {
   params: {
@@ -15,7 +16,7 @@ interface ParamsProps {
 
 export async function generateMetadata({
   params,
-}: PropsParams): Promise<Metadata> {
+}: ParamsProps): Promise<Metadata> {
   try {
     const response: GameProps = await fetch(
       `${process.env.NEXT_API_URL}/next-api/?api=game&id=${params.id}`,
@@ -24,7 +25,7 @@ export async function generateMetadata({
       .then((res) => res.json())
       .catch(() => {
         return {
-          title: "DalyGames - Descubra jogos incríveis para se divertir.",
+          title: "DailyGames - Descubra novos jogos.",
         };
       });
 
